@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container"></div>
+    <header>
+      <form>
+        <input
+          type="text"
+          placeholder="Enter a city.."
+          class="search-city"
+          id="search-city"
+          required
+        />
+        <input type="submit" value="Search" class="submit-button" />
+      </form>
+    </header>
+    <main>
+        <div class="main-temperature">
+            <div>
+        <h1>Lisbon</h1>
+        <p>Wednesday 11:43 Sunny </br>
+        Humidity <span class="highlighted-units">64%</span> Wind <span class="highlighted-units">11km/h</span> </p>
+        </div>
+        <div class="main-degrees">
+            <span class="main-degrees-emoji">☀️</span>
+            <span class="main-degrees-value">22</span>
+            <span class="main-degrees-unit">°C</span>
+        </div>
+</div>
+    </main>
+    <footer>
+        Coded by <a href="https://github.com/siv921"target="_blank">Anastasia</a>. Open sourced on <a href="https://github.com/siv921"target="_blank">GitHub</a> and hosted on <a href="https://netlify.com" target="_blank">Netlify.</a>
+    </footer>
+</div>
+  </body>
+</html>
