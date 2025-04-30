@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,14 +13,14 @@
   <body>
     <div class="container">
     <header>
-      <form>
+      <form id="update-city">
         <input
           type="text"
           placeholder="Enter a city.."
           class="search-city"
           id="search-city"
           required
-          size="70"
+          size="65"
         />
         <input type="submit" value="Search" class="submit-button"/>
       </form>
@@ -28,11 +29,11 @@
         <div class="main-temperature">
             <div>
         <h1>Lisbon</h1>
-        <p>Wednesday 11:43 Sunny </br>
+        <p> <span id="day-time">Wednesday 11:43 </span> Sunny </br>
         Humidity <span class="highlighted-units">64%</span> Wind <span class="highlighted-units">11km/h</span> </p>
         </div>
         <div class="main-degrees">
-            <span class="main-degrees-emoji">☀️  </span><span class="main-degrees-value">22</span><span class="main-degrees-unit">°C</span>
+            <span class="main-degrees-emoji">☀️  </span><span class="main-degrees-value" id="main-degrees-value">22</span><span class="main-degrees-unit">°C</span>
         </div>
 </div>
     </main>
@@ -40,5 +41,6 @@
         Coded by <a href="https://github.com/siv921"target="_blank">Anastasia</a>. Open sourced on <a href="https://github.com/siv921/weather-app.git"target="_blank">GitHub</a> and hosted on <a href="https://netlify.com" target="_blank">Netlify.</a>
     </footer>
 </div>
+<script src="src/index.js"></script>
   </body>
 </html>
