@@ -50,4 +50,4 @@ updateDay.innerHTML = formatDate(currentDate);
 let city = document.querySelector("#update-city");
 city.addEventListener("submit", SearchFormSubmit);
 
-searchCity("London");
+searchCity("Lisbon");
