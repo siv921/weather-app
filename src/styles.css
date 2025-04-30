@@ -52,14 +52,15 @@ a {
   font-size: 86px;
   color: rgba(2, 2, 2, 0.9);
   position: relative;
-  top: 22px;
+  top: 14px;
 }
 
 .main-degrees-emoji {
-  font-size: 37px;
+  width: 88px;
+  height: 88px;
   position: relative;
-  bottom: 18px;
-  right: 4px;
+  bottom: -20px;
+  right: -4px;
 }
 
 .main-degrees-unit {

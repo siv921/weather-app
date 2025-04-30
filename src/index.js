@@ -17,17 +17,18 @@ function updateTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind-speed");
-  let emojiElement = document.querySelector("#emoji");
   let updateDay = document.querySelector("#day-time");
   let date = new Date(response.data.time * 1000);
+  let emojiElement = document.querySelector("#emoji");
 
   updateDay.innerHTML = formatDate(date);
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
-  emojiElement.innerHTML = response.data.condition.icon;
   temperatureElement.innerHTML = temperature;
+  emojiElement.innerHTML = `<img src=
+"${response.data.condition.icon_url}" class="main-degrees-emoji"/>`;
 }
 
 function formatDate(date) {
