@@ -12,10 +12,22 @@ function SearchFormSubmit(event) {
 
 function updateTemperature(response) {
   let temperature = Math.round(response.data.temperature.current);
-  let currentTemp = document.querySelector("#main-degrees-value");
-  let newHeading = document.querySelector("#new-city");
-  newHeading.innerHTML = response.data.city;
-  currentTemp.innerHTML = temperature;
+  let temperatureElement = document.querySelector("#main-degrees-value");
+  let cityElement = document.querySelector("#new-city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind-speed");
+  let emojiElement = document.querySelector("#emoji");
+  let updateDay = document.querySelector("#day-time");
+  let date = new Date(response.data.time * 1000);
+
+  updateDay.innerHTML = formatDate(date);
+  cityElement.innerHTML = response.data.city;
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windElement.innerHTML = `${response.data.wind.speed}km/h`;
+  emojiElement.innerHTML = response.data.condition.icon;
+  temperatureElement.innerHTML = temperature;
 }
 
 function formatDate(date) {
@@ -39,13 +51,8 @@ function formatDate(date) {
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  return `${currentDay} ${hours}:${minutes} `;
+  return `${currentDay} ${hours}:${minutes}, `;
 }
-
-let currentDate = new Date();
-let updateDay = document.querySelector("#day-time");
-
-updateDay.innerHTML = formatDate(currentDate);
 
 let city = document.querySelector("#update-city");
 city.addEventListener("submit", SearchFormSubmit);
