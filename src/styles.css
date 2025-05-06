@@ -103,7 +103,7 @@ a {
 
 .weather-forecast {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
 }
 
@@ -113,8 +113,9 @@ a {
   margin-bottom: 5px;
 }
 .weather-forecast-emoji {
-  font-size: 30px;
-  margin-bottom: 5px;
+  width: 80px;
+  display: block;
+  margin: 0 auto;
 }
 
 .weather-forecast-temperatures {
@@ -122,8 +123,10 @@ a {
   line-height: 30px;
   color: #e8668d;
   margin-bottom: 25px;
+  font-family: "Poppins", sans-serif;
 }
 
 .forecast-bold {
   font-weight: 600;
+  padding-right: 5px;
 }
