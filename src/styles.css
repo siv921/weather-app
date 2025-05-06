@@ -104,20 +104,20 @@ a {
 .weather-forecast {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   text-align: center;
-  margin-top: 10px;
 }
 
 .weather-forecast-weekday {
   color: rgba(2, 2, 2, 0.4);
   line-height: 30px;
-  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
 .weather-forecast-emoji {
   font-size: 30px;
-  padding-bottom: 5px;
+  margin-bottom: 5px;
 }
+
 .weather-forecast-temperatures {
   color: rgba(2, 2, 2, 0.4);
   line-height: 30px;
