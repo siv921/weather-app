@@ -52,15 +52,15 @@ a {
   font-size: 86px;
   color: rgba(2, 2, 2, 0.9);
   position: relative;
-  top: 14px;
+  top: -23px;
 }
 
 .main-degrees-emoji {
-  width: 88px;
-  height: 88px;
+  width: 125px;
+  height: 125px;
   position: relative;
-  bottom: -20px;
-  right: -4px;
+  bottom: -28px;
+  right: -14px;
 }
 
 .main-degrees-unit {
@@ -103,19 +103,21 @@ a {
 
 .weather-forecast {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
+  margin: 20px 0 20px;
 }
 
 .weather-forecast-weekday {
   color: rgba(2, 2, 2, 0.4);
   line-height: 30px;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 .weather-forecast-emoji {
   width: 80px;
   display: block;
   margin: 0 auto;
+  margin-bottom: 3px;
 }
 
 .weather-forecast-temperatures {

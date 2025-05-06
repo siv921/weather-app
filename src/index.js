@@ -54,9 +54,15 @@ function formatDate(date) {
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  return `${currentDay} ${hours}:${minutes}: `;
+  return `${currentDay} ${hours}:${minutes} -   `;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[date.getDay()];
+}
 function getForecast(city) {
   let apiKey = `d102f34aao5ce8t34e64ea7aab7a37d2`;
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
@@ -70,7 +76,9 @@ function displayForecast(response) {
 
   response.data.daily.forEach(function (day, index) {
     if (index < 6) {
-      forecastHtml += `<div =class"weather-forecast-day"> <div class="weather-forecast-weekday"> Tue</div> <div><img src="${
+      forecastHtml += `<div =class"weather-forecast-day"> <div class="weather-forecast-weekday"> ${formatDay(
+        day.time
+      )}</div> <div><img src="${
         day.condition.icon_url
       }" class="weather-forecast-emoji"/></div> <div class="weather-forecast-temperatures"> <span class="forecast-bold"> ${Math.round(
         day.temperature.maximum
