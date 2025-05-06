@@ -104,7 +104,6 @@ a {
 .weather-forecast {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 30px;
   text-align: center;
 }
 
@@ -122,6 +121,7 @@ a {
   color: rgba(2, 2, 2, 0.4);
   line-height: 30px;
   color: #e8668d;
+  margin-bottom: 25px;
 }
 
 .forecast-bold {

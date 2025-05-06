@@ -55,7 +55,24 @@ function formatDate(date) {
   return `${currentDay} ${hours}:${minutes}, `;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHtml = "";
+
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div =class"weather-forecast-day"> <div class="weather-forecast-weekday"> ${day}</div> <div class="weather-forecast-emoji">☀️</div> <div class="weather-forecast-temperatures"> <span class ="forecast-bold">15°   </span>  9°</div></div>`;
+  });
+
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let city = document.querySelector("#update-city");
 city.addEventListener("submit", SearchFormSubmit);
 
 searchCity("Lisbon");
+
+displayForecast();
